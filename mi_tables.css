@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 6
+   Case Problem 1
+
+   Tables Style Sheet
+   Author: Dylan
+   Date:   12.11.18
+
+   Filename:         mi_tables.css
+
+*/
+
+/* Table Styles */
+/* This style gives the table a linear gradient background color of a very light blue to black, and gives the table a 5 pixel wide gray border. */
+table {
+    background: linear-gradient(to bottom, rgb(190, 215, 255), black);
+    border: 5px solid gray;
+}
+
+/* This style affects heading cells and data cells within the table to give them a 3 pixel gray border, a line height of 1.4 em, and padding of 8 pixels around all sides of the cell. */
+table th,
+table td {
+    border: 3px solid gray;
+    line-height: 1.4em;
+    padding: 8px;
+}
+
+/* This style sets the background color of all heading cells to black, and sets their text color to a blue-ish color. */
+th {
+    background-color: black;
+    color: rgb(130, 210, 255);
+    font-weight: normal;
+}
+
+/* This style sets the text color of all data cells to white with a font size of 0.9 em and aligns the text to the top of the cell. */
+td {
+    color: white;
+    font-size: 0.9em;
+    vertical-align: top;
+}
+
+
+
+/* Column Styles */
+/* This style gives the column element with an ID of "firstCol" a width of 24%; */
+col#firstCol {
+    width: 24%;
+}
+
+/* This style gives the column element within the class of "dataCols" a width of 19%; */
+col.dataCols {
+    width: 19%;
+}
+
+
+
+/* Table Header Styles */
+/* This style sets the height of the table row within the table header row group to 60 pixels */
+thead tr {
+    height: 60px;
+}
+
+/* This style affects the first heading cell within the first table row nested in the table header row group to give it a font size of 2 em. */
+thead tr:first-of-type th:first-of-type {
+    font-size: 2em;
+}
+
+/* This style affects every other heading cell other than the first one within the first table row nested in the table header row group to give them a transparent background color and a text color of black. */
+thead tr:first-of-type th:not(:first-of-type) {
+    background-color: transparent;
+    color: black;
+}
